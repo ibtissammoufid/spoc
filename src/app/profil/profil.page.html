@@ -1,0 +1,95 @@
+
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar color="secondary">
+      <ion-buttons slot="start">
+          <ion-menu-button auto-hide="false"></ion-menu-button>
+        </ion-buttons>
+      <ion-title>ENSIAS courses</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid>
+
+    <ion-row>
+
+      <ion-col size-md="6" offset-md="3">
+        <ion-card>
+            <ion-card-header>
+                <ion-card-title>My Informations</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-item>
+                    <ion-label position="floating">First Name : Fatima</ion-label>
+                    <ion-input type="text" id="input-reason"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="floating">Last Name : Nasri</ion-label>
+                    <ion-input type="text" id="input-reason"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="floating">Email : fatimanacri@gmail.com</ion-label>
+                    <ion-input type="text" id="input-reason"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="floating">Phone Number : 0678435509</ion-label>
+                    <ion-input type="text" id="input-reason"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="floating">CNE : 6778541954</ion-label>
+                    <ion-input type="text" id="input-reason"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="floating">School Level : 1A</ion-label>
+                    <ion-input type="text" id="input-reason"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="floating">Option : GL</ion-label>
+                    <ion-input type="text" id="input-reason"></ion-input>
+                </ion-item>
+
+
+
+
+                <div class="ion-margin-vertical ion-text-right">
+                    <ion-button fill="outline" color="danger" id="btn-cancel">
+                        <ion-icon name="close" slot="start"></ion-icon>Clear</ion-button>
+                    <ion-button id="btn-confirm">
+                        <ion-icon name="checkmark" slot="start"></ion-icon>Eddit</ion-button>
+                </div>
+
+            </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+    </ion-row>
+    <ion-tabs>
+
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="profile">
+          <ion-icon name="person-circle" color="secondary"></ion-icon>
+          <ion-label>Profile</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="dashboard">
+          <ion-icon name="school-outline" ></ion-icon>
+          <ion-label>Canals</ion-label>
+        </ion-tab-button>
+
+
+        <ion-tab-button tab="settings">
+          <ion-icon name="Notifications-outline" ></ion-icon>
+          <ion-label>Notifications</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="settings">
+          <ion-icon name="help-circle-outline" ></ion-icon>
+          <ion-label>Help</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+
+    </ion-tabs>
+  </ion-grid>
+
+</ion-content>
