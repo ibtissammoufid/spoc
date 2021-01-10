@@ -23,10 +23,8 @@ const routes: Routes = [
     path: 'notifications',
     loadChildren: () => import('./notifications/notifications.module').then( m => m.NotificationsPageModule)
   },
-  {
-    path: 'files',
-    loadChildren: () => import('./files/files.module').then( m => m.FilesPageModule)
-  },
+  { 
+    path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule'},
   {
     path: 'assignments',
     loadChildren: () => import('./assignments/assignments.module').then( m => m.AssignmentsPageModule)
@@ -35,6 +33,7 @@ const routes: Routes = [
     path: 'messages',
     loadChildren: () => import('./messages/messages.module').then( m => m.MessagesPageModule)
   },
+
 ];
 
 @NgModule({

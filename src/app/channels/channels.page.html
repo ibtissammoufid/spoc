@@ -16,7 +16,7 @@
             <ion-col size="12" size-sm>
                 <ion-card *ngFor="let channel of mychannels">
                     <ion-card-header >
-										<ion-item button lines="none" (click)="goTofilespages()"> <img src="../../assets/img.jpeg"> </ion-item>
+										<ion-item button lines="none" (click)="goTofilespages()"> <img src="../../assets/1.jpg"> </ion-item>
 
                       <ion-card-title>{{channel.canalName}}</ion-card-title>
 										</ion-card-header>
@@ -24,26 +24,7 @@
             </ion-col>
         </ion-row>
     </ion-grid>
-    <ion-tabs>
-
-      <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="profile">
-          <ion-icon name="person-circle-outline"></ion-icon>
-          <ion-label>Profile</ion-label>
-        </ion-tab-button>
-
-        <ion-tab-button tab="dashboard">
-          <ion-icon name="school" color="secondary"></ion-icon>
-          <ion-label>Canals</ion-label>
-        </ion-tab-button>
-
-        <ion-tab-button tab="settings">
-          <ion-icon name="log-out-outline" ></ion-icon>
-          <ion-label>Log out</ion-label>
-        </ion-tab-button>
-      </ion-tab-bar>
-
-    </ion-tabs>
+    
 
 </ion-content>
 

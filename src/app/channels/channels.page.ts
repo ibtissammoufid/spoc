@@ -23,7 +23,7 @@ export class ChannelsPage implements OnInit {
 		});
 	}
 	goTofilespages(){
-		this.router.navigate(['files']);
+		this.router.navigateByUrl('/tabs/tabs/files');
 	}
 
 }
