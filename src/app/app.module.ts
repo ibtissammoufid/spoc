@@ -1,3 +1,5 @@
+import { AuthService } from './services/auth/auth.service';
+import { ChannelsService } from './services/channels/channels.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -9,7 +11,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFirestoreModule, AngularFirestore } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
@@ -22,7 +24,9 @@ import { AppRoutingModule } from './app-routing.module';
   providers: [
     StatusBar,
 		SplashScreen,
-		AngularFirestoreModule,
+		AngularFirestore,
+		ChannelsService,
+		AuthService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

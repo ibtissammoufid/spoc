@@ -14,68 +14,13 @@
     <ion-grid>
         <ion-row>
             <ion-col size="12" size-sm>
-                <ion-card>
-                  <a href="canal.html">
-                    <img src="assets/icon/1.jpg" /></a>
+                <ion-card *ngFor="let channel of mychannels">
+                    <ion-card-header >
+										<ion-item button lines="none" (click)="goTofilespages()"> <img src="../../assets/img.jpeg"> </ion-item>
 
-                    <ion-card-header>
-                      <ion-card-title>TEC 2A</ion-card-title>
-                    </ion-card-header>
+                      <ion-card-title>{{channel.canalName}}</ion-card-title>
+										</ion-card-header>
                   </ion-card>
-            </ion-col>
-            <ion-col size="12" size-sm>
-              <ion-card>
-                <a href="canal.html">
-                  <img src="assets/icon/1.jpg" /></a>
-
-                  <ion-card-header>
-                    <ion-card-title>BDOO</ion-card-title>
-                  </ion-card-header>
-                </ion-card>
-            </ion-col>
-            <ion-col size="12" size-sm>
-              <ion-card>
-                <a href="canal.html">
-                  <img src="assets/icon/1.jpg" /></a>
-
-                  <ion-card-header>
-                    <ion-card-title>Indexation Data</ion-card-title>
-                  </ion-card-header>
-                </ion-card>
-            </ion-col>
-            <ion-col size="12" size-sm>
-              <ion-card>
-                <a href="canal.html">
-                  <img src="assets/icon/1.jpg" /></a>
-
-                  <ion-card-header>
-                    <ion-card-title>DBA</ion-card-title>
-                  </ion-card-header>
-                </ion-card>
-            </ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col size="12" size-sm >
-                <ion-card>
-                    <img src="assets/icon/1.jpg" />
-                    <ion-card-header>
-                      <ion-card-title>Ingenierie Web</ion-card-title>
-                    </ion-card-header>
-                  </ion-card>
-            </ion-col>
-            <ion-col size="12" size-sm >
-                <ion-card>
-                    <img src="assets/icon/1.jpg" />
-                    <ion-card-header>
-                      <ion-card-title>SQL Server</ion-card-title>
-                    </ion-card-header>
-                  </ion-card>
-            </ion-col>
-            <ion-col size="12" size-sm >
-
-            </ion-col>
-            <ion-col size="12" size-sm >
-
             </ion-col>
         </ion-row>
     </ion-grid>
