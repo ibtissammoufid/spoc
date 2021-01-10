@@ -8,7 +8,7 @@ export class FilesService {
 
 	constructor(private afs : AngularFirestore) { }
 
-	getChannels(){
+	getFiles(){
 		return this.afs.collection('files').valueChanges();
 	}
 

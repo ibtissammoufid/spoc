@@ -28,10 +28,6 @@ const routes: Routes = [
     loadChildren: () => import('./files/files.module').then( m => m.FilesPageModule)
   },
   {
-    path: 'conversaions',
-    loadChildren: () => import('./conversaions/conversaions.module').then( m => m.ConversaionsPageModule)
-  },
-  {
     path: 'assignments',
     loadChildren: () => import('./assignments/assignments.module').then( m => m.AssignmentsPageModule)
   },

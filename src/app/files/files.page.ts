@@ -12,7 +12,7 @@ export class FilesPage implements OnInit {
   constructor(public filesservice : FilesService) { }
 
   ngOnInit() {
-		this.filesservice.getChannels().subscribe(files =>{
+		this.filesservice.getFiles().subscribe(files =>{
 			//console.log(channels ) ;
 			this.myfiles = files;
 		//	console.log(this.mychannels ) ;
