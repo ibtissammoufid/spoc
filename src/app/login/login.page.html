@@ -19,14 +19,15 @@
                         <ion-card-title color="primary" style="text-align:center;">LOGIN</ion-card-title>
                     </ion-card-header>
                     <ion-card-content>
+
                         <ion-item>
                             <ion-label position="floating">Email </ion-label>
-                            <ion-input type="text" id="input-reason"></ion-input>
+                            <ion-input type="email" #email required></ion-input>
                         </ion-item>
 
                         <ion-item>
                             <ion-label position="floating">Password</ion-label>
-                            <ion-input type="text" id="input-reason"></ion-input>
+                            <ion-input type="password" #password required></ion-input>
                         </ion-item>
 
                       <br>
@@ -36,14 +37,14 @@
 
 
                       <br><br>
-
-
                         <div class="ion-margin-vertical ion-text-right">
-                            <ion-button fill="outline" color="danger" id="btn-cancel">
-                                <ion-icon name="close" slot="start"></ion-icon>Cancel</ion-button>
-                            <ion-button id="btn-confirm" href="canaux.html">
-                                <ion-icon name="log-in" slot="start" ></ion-icon>Login</ion-button>
-                        </div>
+													<ion-item lines = "none">
+                            <ion-button type="submit" fill="outline" color="danger" slot="end" >
+																<ion-icon name="close" slot="start"></ion-icon>Cancel</ion-button>
+                            <ion-button  type="submit" slot="end" (click)="logIn(email, password)" >
+																<ion-icon name="log-in" slot="start" ></ion-icon>Login</ion-button>
+															</ion-item>
+												</div>
 
                     </ion-card-content>
                 </ion-card>
