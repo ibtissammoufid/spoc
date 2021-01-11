@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProfilPage implements OnInit {
 
   myprofil : any[];
+  navCtrl: any;
 
   constructor(public profilservice : ProfilService ) { }
   ngOnInit() {
@@ -17,6 +18,9 @@ export class ProfilPage implements OnInit {
 			this.myprofil = profil;
 		//	console.log(this.mychannels ) ;
 		});
-	}
+  }
+  refreshPage() {
+    window.location.reload();
+}
 
 }

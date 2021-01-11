@@ -1,13 +1,13 @@
-
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+        <ion-menu-button auto-hide="false"></ion-menu-button>
+      </ion-buttons>
+    <ion-title>ENSIAS courses</ion-title>
+  </ion-toolbar>
+</ion-header>
 <ion-content [fullscreen]="true">
-  <ion-header>
-    <ion-toolbar color="secondary">
-      <ion-buttons slot="start">
-          <ion-menu-button auto-hide="false"></ion-menu-button>
-        </ion-buttons>
-      <ion-title>ENSIAS courses</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  
 
   <ion-grid>
 
@@ -26,16 +26,30 @@
                         <ion-card>
                           <ion-item  class="ion-activated">
                             <ion-icon name="attach" slot="start"></ion-icon>
-                            <ion-label>Canvas  </ion-label>
+                            <ion-label>{{assignment.attached1}}  </ion-label>
 
-                            <ion-icon name="cloud-download-outline" slot="end"></ion-icon>
+
+                            <ion-buttons slot="end" href="https://www.socialbusinessmodels.ch/sites/default/files/blog/2018-05/Fiches.pdf">
+                              <ion-button  href="https://www.socialbusinessmodels.ch/sites/default/files/blog/2018-05/Fiches.pdf">
+                                <ion-icon name="cloud-download-outline" slot="end"></ion-icon>
+                              </ion-button>
+                            </ion-buttons>
                           </ion-item>
                           <ion-item  class="ion-activated">
                             <ion-icon name="attach" slot="start"></ion-icon>
-                            <ion-label>Directives </ion-label>
-                            <ion-icon name="cloud-download-outline" slot="end"></ion-icon>
+                            <ion-label>{{assignment.attached2}} </ion-label>
+                            
+                            <ion-buttons slot="end">
+                              <ion-button  >
+                                <ion-icon name="cloud-download-outline" slot="end"></ion-icon>
+                              </ion-button>
+                            </ion-buttons>
                           </ion-item>
                       </ion-card>
+                      <ion-button color="white" shape="round" size="small">
+                        <input type="file"  />
+                        <ion-icon name="cloud-upload-outline" color="primary"  slot="start"></ion-icon>
+                      </ion-button>
                       </ion-card-content>
                   </ion-card>
 

@@ -17,6 +17,10 @@ export class MessagesPage implements OnInit {
 			this.mymessages = messages;
 		//	console.log(this.mychannels ) ;
 		});
-	}
+  }
+  
+  refreshPage() {
+    window.location.reload();
+}
 
 }

@@ -1,31 +1,26 @@
-
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+        <ion-menu-button auto-hide="false"></ion-menu-button>
+      </ion-buttons>
+    <ion-title>ENSIAS courses</ion-title>
+  </ion-toolbar>
+</ion-header>
 <ion-content [fullscreen]="true">
-  <ion-header>
-    <ion-toolbar color="secondary">
-      <ion-buttons slot="start">
-          <ion-menu-button auto-hide="false"></ion-menu-button>
-        </ion-buttons>
-      <ion-title>ENSIAS courses</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-
-  <ion-content >
     <ion-grid>
         <ion-row>
             <ion-col size="12" size-sm>
                 <ion-card *ngFor="let channel of mychannels">
+                  <img src="../../assets/1.jpg"  (click)="goTofilespages()"/>
                     <ion-card-header >
-										<ion-item button lines="none" (click)="goTofilespages()"> <img src="../../assets/1.jpg"> </ion-item>
-
+                     
                       <ion-card-title>{{channel.canalName}}</ion-card-title>
 										</ion-card-header>
-                  </ion-card>
+                </ion-card>
+
+                 
             </ion-col>
         </ion-row>
     </ion-grid>
     
-
-</ion-content>
-
 </ion-content>

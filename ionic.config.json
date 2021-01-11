@@ -1,7 +1,8 @@
 {
   "name": "IonicProject",
   "integrations": {
-    "cordova": {}
+    "cordova": {},
+    "capacitor": {}
   },
   "type": "angular"
 }

@@ -1,13 +1,13 @@
-
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+        <ion-menu-button auto-hide="false"></ion-menu-button>
+      </ion-buttons>
+    <ion-title>ENSIAS courses</ion-title>
+  </ion-toolbar>
+</ion-header>
 <ion-content [fullscreen]="true">
-  <ion-header>
-    <ion-toolbar color="secondary">
-      <ion-buttons slot="start">
-          <ion-menu-button auto-hide="false"></ion-menu-button>
-        </ion-buttons>
-      <ion-title>ENSIAS courses</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  
 
   <ion-grid>
 
@@ -54,9 +54,9 @@
 
 
                 <div class="ion-margin-vertical ion-text-right">
-                    <ion-button fill="outline" color="danger" id="btn-cancel">
+                    <ion-button fill="outline" color="danger" id="btn-cancel" (click)="refreshPage()">
                         <ion-icon name="close" slot="start"></ion-icon>Clear</ion-button>
-                    <ion-button id="btn-confirm">
+                    <ion-button id="btn-confirm" (click)="refreshPage()">
                         <ion-icon name="checkmark" slot="start"></ion-icon>Eddit</ion-button>
                 </div>
 
