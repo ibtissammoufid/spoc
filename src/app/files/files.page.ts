@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FilesService } from '../services/files/files.service';
 
+declare var require: any
+const FileSaver = require('file-saver');
+
 @Component({
   selector: 'app-files',
   templateUrl: './files.page.html',
@@ -17,6 +20,11 @@ export class FilesPage implements OnInit {
 			this.myfiles = files;
 		//	console.log(this.mychannels ) ;
 		});
+  }
+  downloadPdf(pdfUrl: string, pdfName: string ) {
+    //const pdfUrl = './assets/sample.pdf';
+    //const pdfName = 'your_pdf_file';
+    FileSaver.saveAs(pdfUrl, pdfName);
   }
 
 }
