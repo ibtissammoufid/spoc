@@ -18,35 +18,35 @@
             <ion-card-header>
                 <ion-card-title>My Informations</ion-card-title>
             </ion-card-header>
-            <ion-card-content>
+            <ion-card-content *ngFor="let profil of myprofil">
                 <ion-item>
-                    <ion-label position="floating">First Name : Fatima</ion-label>
+                    <ion-label position="floating">First Name {{profil.first_name}}</ion-label>
                     <ion-input type="text" id="input-reason"></ion-input>
                 </ion-item>
 
                 <ion-item>
-                    <ion-label position="floating">Last Name : Nasri</ion-label>
+                    <ion-label position="floating">Last Name : {{profil.last_name}}</ion-label>
                     <ion-input type="text" id="input-reason"></ion-input>
                 </ion-item>
                 <ion-item>
-                    <ion-label position="floating">Email : fatimanacri@gmail.com</ion-label>
+                    <ion-label position="floating">Email : {{profil.Email}}</ion-label>
                     <ion-input type="text" id="input-reason"></ion-input>
                 </ion-item>
                 <ion-item>
-                    <ion-label position="floating">Phone Number : 0678435509</ion-label>
+                    <ion-label position="floating">Phone Number : {{profil.phone_number}}</ion-label>
                     <ion-input type="text" id="input-reason"></ion-input>
                 </ion-item>
                 <ion-item>
-                    <ion-label position="floating">CNE : 6778541954</ion-label>
+                    <ion-label position="floating">CNE : {{ profil.cne }}</ion-label>
                     <ion-input type="text" id="input-reason"></ion-input>
                 </ion-item>
 
                 <ion-item>
-                    <ion-label position="floating">School Level : 1A</ion-label>
+                    <ion-label position="floating">School Level : {{ profil.school_level }}</ion-label>
                     <ion-input type="text" id="input-reason"></ion-input>
                 </ion-item>
                 <ion-item>
-                    <ion-label position="floating">Option : GL</ion-label>
+                    <ion-label position="floating">Option : {{ profil.Option }}</ion-label>
                     <ion-input type="text" id="input-reason"></ion-input>
                 </ion-item>
 
@@ -65,7 +65,7 @@
       </ion-col>
 
     </ion-row>
-   
+
   </ion-grid>
 
 </ion-content>

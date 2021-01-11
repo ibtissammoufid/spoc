@@ -4,12 +4,12 @@ import { AngularFirestore } from '@angular/fire/firestore';
 @Injectable({
   providedIn: 'root'
 })
-export class MessagesService {
+export class ProfilService {
 
   constructor( private afs : AngularFirestore) {
 	}
 
 	getMessages(){
-		return this.afs.collection('message').valueChanges();
+		return this.afs.collection('student').valueChanges();
 	}
 }

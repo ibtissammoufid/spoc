@@ -13,43 +13,17 @@
     <ion-row>
         <ion-col size-md="6" offset-md="3">
 
+					<ion-card *ngFor="let message of mymessages">
+						<ion-item>
+							<ion-icon name="person" slot="start"></ion-icon>
+							<ion-label>{{message.name}}</ion-label>
+							<ion-card-subtitle slot="end">{{message.date}}</ion-card-subtitle>
+						</ion-item>
 
-                      <ion-card>
-                        <ion-item>
-                          <ion-icon name="person" slot="start"></ion-icon>
-                          <ion-label>Moufid Ibtissam</ion-label>
-                          <ion-card-subtitle slot="end">Oct 1, 2020 11:15</ion-card-subtitle>
-                        </ion-item>
-
-                        <ion-card-content>
-                          This is content, without any paragraph or header tags,
-                          within an ion-card-content element.
-                        </ion-card-content>
-                      </ion-card>
-                      <ion-card>
-                        <ion-item>
-                          <ion-icon name="person" slot="start"></ion-icon>
-                          <ion-label>Zeroual Najlae</ion-label>
-                          <ion-card-subtitle slot="end">Oct 1, 2020 11:16</ion-card-subtitle>
-                        </ion-item>
-
-                        <ion-card-content>
-                          This is content, without any paragraph or header tags,
-                          within an ion-card-content element.
-                        </ion-card-content>
-                      </ion-card>
-                      <ion-card>
-                        <ion-item>
-                          <ion-icon name="person" slot="start"></ion-icon>
-                          <ion-label>Nassrallah Meriem</ion-label>
-                          <ion-card-subtitle slot="end">Oct 1, 2020 11:17</ion-card-subtitle>
-                        </ion-item>
-
-                        <ion-card-content>
-                          This is content, without any paragraph or header tags,
-                          within an ion-card-content element.
-                        </ion-card-content>
-                      </ion-card>
+						<ion-card-content>
+							{{message.content}}
+						</ion-card-content>
+					</ion-card>
 
 
 
@@ -74,7 +48,7 @@
         </ion-card>
     </ion-col>
     </ion-row>
-   
+
 </ion-grid>
 
 </ion-content>

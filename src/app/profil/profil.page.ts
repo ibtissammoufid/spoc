@@ -1,3 +1,4 @@
+import { ProfilService } from './../services/profil/profil.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilPage implements OnInit {
 
-  constructor() { }
+  myprofil : any[];
 
+  constructor(public profilservice : ProfilService ) { }
   ngOnInit() {
-  }
+		this.profilservice.getMessages().subscribe(profil =>{
+			//console.log(channels ) ;
+			this.myprofil = profil;
+		//	console.log(this.mychannels ) ;
+		});
+	}
 
 }
