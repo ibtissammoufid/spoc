@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MessagesService } from '../services/messages/messages.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-messages',
@@ -10,7 +11,7 @@ export class MessagesPage implements OnInit {
 
   mymessages : any[];
 
-  constructor(public messageservice : MessagesService ) { }
+  constructor(public messageservice : MessagesService, public router: Router ) { }
   ngOnInit() {
 		this.messageservice.getMessages().subscribe(messages =>{
 			//console.log(channels ) ;
@@ -21,6 +22,10 @@ export class MessagesPage implements OnInit {
   
   refreshPage() {
     window.location.reload();
+}
+
+goTocanalspages(){
+  this.router.navigateByUrl('channels');
 }
 
 }

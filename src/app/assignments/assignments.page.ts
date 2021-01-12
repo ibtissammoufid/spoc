@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AssignmentsService } from '../services/assignments/assignments.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-assignments',
@@ -10,7 +11,7 @@ export class AssignmentsPage implements OnInit {
 
 	myassignments : any[];
 
-  constructor(public assignmentsservice : AssignmentsService ) { }
+  constructor(public assignmentsservice : AssignmentsService, public router: Router ) { }
   ngOnInit() {
 		this.assignmentsservice.getAssignments().subscribe(assignments =>{
 			//console.log(channels ) ;
@@ -19,6 +20,8 @@ export class AssignmentsPage implements OnInit {
 		});
 	}
 
-
+	goTocanalspages(){
+		this.router.navigateByUrl('channels');
+	  }
 
 }

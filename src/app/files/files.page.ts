@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FilesService } from '../services/files/files.service';
+import { Router } from '@angular/router';
 
 declare var require: any
 const FileSaver = require('file-saver');
@@ -12,7 +13,7 @@ const FileSaver = require('file-saver');
 export class FilesPage implements OnInit {
 
 	myfiles : any[];
-  constructor(public filesservice : FilesService) { }
+  constructor(public filesservice : FilesService, public router: Router) { }
 
   ngOnInit() {
 		this.filesservice.getFiles().subscribe(files =>{
@@ -25,6 +26,10 @@ export class FilesPage implements OnInit {
     //const pdfUrl = './assets/sample.pdf';
     //const pdfName = 'your_pdf_file';
     FileSaver.saveAs(pdfUrl, pdfName);
+  }
+
+  goTocanalspages(){
+    this.router.navigateByUrl('channels');
   }
 
 }

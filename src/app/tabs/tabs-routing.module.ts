@@ -49,6 +49,16 @@ const routes: Routes = [
             ]
         },
         {
+          path: 'notifications',
+          children:
+            [
+              {
+                path: '',
+                loadChildren: '../notifications/notifications.module#NotificationsPageModule'
+              }
+            ]
+        },
+        {
           path: 'tabs',
           redirectTo: '/tabs/files',
           pathMatch: 'full'
