@@ -41,10 +41,11 @@
         <ion-card >
             <ion-card-content>
               <ion-item>
-                <ion-input type="text" slot="start" placeholder="Reply" id="input-reason"></ion-input>
+                <ion-input type="text" [(ngModel)]="addrecord.description" slot="start" placeholder="Reply" ></ion-input>
 
                   <ion-buttons slot="end">
-                    <ion-button  (click)="refreshPage()">
+                    <ion-button  (click)="AddRecord(addrecord.description)">
+                      
                       <ion-icon slot="end" name="send" color="danger"></ion-icon>
 
                     </ion-button>
